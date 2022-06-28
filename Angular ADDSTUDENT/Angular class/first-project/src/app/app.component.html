@@ -1,0 +1,22 @@
+<!-- <div id="page">
+<h1>
+Create An Account
+</h1>
+<input type="text" placeholder="First Name"><br>
+<input type="text" placeholder="Last Name"><br>
+<input type="text" placeholder="Email"><br>
+<input type="text" placeholder="Username"><br>
+<input type="text" placeholder="Password"><br>
+<button >LOGIN</button>
+</div> -->
+<div>
+  <form #myForm="ngForm" (ngSubmit)="mySubmit()">
+    <input  ngmodel type="text" name="firstname" required placeholder="firstname">
+
+    <div *ngIf="!myForm.control.controls.firstname">fill your first name</div>
+
+    <input ngmodel type="text" name="Email" Email placeholder="Email" id="">
+    <input  type="submit" name="">
+  </form>
+  <div *ngIf="!myForm.valid && myForm.touched">my form is not valid</div>
+</div>
